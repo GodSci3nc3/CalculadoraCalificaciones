@@ -10,53 +10,64 @@
 
     <main class = "container mt-5">
 
-    <div class="text-center">
-        <h1>Calculadora de promedios por materia</h1>
+        <div class="text-center">
+            <h1>Calculadora de promedios por materia</h1>
 
-        <h3>A continuación anote la siguiente información para realizar el cálculo</h3>
-    </div>
+            <h3>A continuación anote la siguiente información para realizar el cálculo</h3>
+        </div>
 
-    <form id="subjectsNumberForm" class="mb-4">
-      <div class="mb-3">
-        <label for="subjectsNumber" class="form-label">Número de materias</label>
-        <input type="number" class="form-control" id="subjectsNumber" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Siguiente</button>
+        <form id="subjectsNumberForm" class="mb-4">
+        <div class="mb-3">
+            <label for="subjectsNumber" class="form-label">Número de materias</label>
+            <input type="number" class="form-control" id="subjectsNumber" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Siguiente</button>
+        </form>
+
+
+    <form id = "calculationForm">
+
     </form>
 
+    <div id="subjectTemplate" style="display:none">
+        <div class="mb-3">
+            <label class="form-label">Calificación de la unidad 1</label>
+            <input type="number" step="0.01" class="form-control grade">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Calificación de la unidad 2</label>
+            <input type="number" step="0.01" class="form-control grade">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Calificación de la unidad 3</label>
+            <input type="number" step="0.01" class="form-control grade">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Calificación de la unidad 4</label>
+            <input type="number" step="0.01" class="form-control grade">
+        </div>
+    </div>
 
-<form id = "calculationForm">      
 
-  <div class="mb-3">
-    <label for="calificaciones" class="form-label">Calificación de la unidad 1</label>
-    <input type="text" class="form-control" id="gradesInput">
-  </div>
+        <div class="resultsContainer mt-4" id = "resultsContainer">
+            <h2>Resultados</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody">
+                    
+                </tbody>
 
-    <div class="mb-3">
-    <label for="calificaciones" class="form-label">Calificación de la unidad 2</label>
-    <input type="text" class="form-control" id="gradesInput" >
-  </div>
-
-    <div class="mb-3">
-    <label for="calificaciones" class="form-label">Calificación de la unidad 3</label>
-    <input type="text" class="form-control" id="gradesInput">
-  </div>
-
-    <div class="mb-3">
-    <label for="calificaciones" class="form-label">Calificación de la unidad 4</label>
-    <input type="text" class="form-control" id="gradesInput" >
-  </div>
-
-  <button type="submit" class="btn btn-primary">Calcular promedio</button>
-</form>
-
-<div class="resultsContainer mt-4">
-<h2>Resultados</h2>
-<p id="averageResult"></p>
-</div>
-</main>
+            </table>
+        </div>
+    </main>
 
 
     
 </body>
+<script src="app.js"></script>
 </html>
