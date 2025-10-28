@@ -6,7 +6,7 @@ resultsContainer.style.display = 'none'
 document.getElementById('subjectsNumberForm').addEventListener('submit', function(event){
     event.preventDefault()
     const n = parseInt(document.getElementById('subjectsNumber').value)
-    if (isNaN(n) || n <= 0) return
+    if (isNaN(n) || n <= 0 || n >= 8) return
     document.getElementById('calculationForm').innerHTML = ''
     for (var i = 1; i <= n; i++){
         document.getElementById('calculationForm').innerHTML += '<div class="subject"><h4>Materia '+i+'</h4>' + subjectTemplate.innerHTML + '</div>'
